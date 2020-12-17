@@ -37,11 +37,13 @@ img{ border: none;}
 header#hd{padding: 15px 0;}
 #hd a, #hd img{ display: block;}
 /* 꺽세 필요 없음. 여기서는 모든 a, img에 주기 위해서. 꺽세의 의미: 무조건 자식  띄어쓰기: 후손선택자*/
-#gnb > li > a {font-weight: bold; font-size: 18px; line-height: 46px; margin-left:  2em; display: block;}
+#gnb > li{ background: green; height: 46px;}
+#gnb > li > a {font-weight: bold; font-size: 18px; line-height: 46px; padding-left: 2em;
+               padding-bottom: 15px; background: yellow;}
 /* li.fl a{font-size: 20px; line-height: 46px ; font-style: bold;} 공통클래스는 언제든 제외될 수 있으므로 위에 방법처럼 사용 */
 /* #gnb > ul > li > a {font-size: 0.8em; line-height: 0.9em;} 이것도 맞음. */
 #gnb .d2{ background-color: darkblue;
-          left: 15px; top:calc(100% + 15px) ; /*띄어쓰기..주의...*/
+          left: 15px; top: calc( 100% + 15px ) ; /*띄어쓰기..주의...*/
           padding: 10px 15px;
           width: 100px;
           display: none;
@@ -51,5 +53,7 @@ header#hd{padding: 15px 0;}
 #gnb li:nth-child(1) .d2{left:30px;}
 /* #gnb li:nth-child(2) .d2{width: 105px;} */
 #gnb li:nth-child(4) .d2{width: 68px;}
+
+#gnb > li:hover .d2 { display: block;}
 section#main{}
 footer#fd{}
